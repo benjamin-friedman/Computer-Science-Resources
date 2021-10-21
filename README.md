@@ -1,2 +1,8 @@
 # Computer-Science-Resources
-Contains resources for data structures, the opaque object design in C, and working with Linux and the Vim text editor.
+Contains resources for the following:
+- Data Structures
+- Opaque Object Design in C
+- Using Linux and the Vim text editor
+- Using Makefiles
+- Inheritance in C++
+- Move Semantics in C++
