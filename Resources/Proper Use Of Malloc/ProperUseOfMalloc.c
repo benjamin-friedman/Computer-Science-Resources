@@ -41,9 +41,5 @@ int main(int argc, char* argv[]) {
     double* a = malloc(sizeof(*a) * 10);                 // valid, no need to manually make additional changes
     S2 * b = malloc(sizeof(*b));                         // valid, no need to manually make additional changes
 
-
-
-
-
     return 0;
 }
