@@ -35,11 +35,11 @@ int main(int argc, char* argv[]) {
        - get rid of the typecast on the return value of malloc
        - don't explicitly write in a type in sizeof(...) */
     int* a = malloc(sizeof(*a) * 10);
-    S1 * b = malloc(sizeof(*b));
+    S1* b = malloc(sizeof(*b));
 
     // You decid to change "a" to an array of 10 doubles, and "b" to an S2 structure...your code is STILL valid                            
     double* a = malloc(sizeof(*a) * 10);                 // valid, no need to manually make additional changes
-    S2 * b = malloc(sizeof(*b));                         // valid, no need to manually make additional changes
+    S2* b = malloc(sizeof(*b));                         // valid, no need to manually make additional changes
 
     return 0;
 }
