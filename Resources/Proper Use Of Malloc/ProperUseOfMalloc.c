@@ -23,11 +23,11 @@ int main(int argc, char* argv[]) {
     S1* b = (S1*)malloc(sizeof(S1));
 
     // You decide to change "a" to an array of 10 doubles, and "b" to an S2 structure...your code becomes invalid.
-    double* a = (int*)malloc(sizeof(int) * 10);       // invalid, must manually make additional changes
-    S2* b = (S1*)malloc(sizeof(S1));                  // invalid, must manually make additional changes
+    double* a = (int*)malloc(sizeof(int) * 10);          // invalid, must manually make additional changes
+    S2* b = (S1*)malloc(sizeof(S1));                     // invalid, must manually make additional changes
 
-    double* a = (double*)malloc(sizeof(double) * 10;  // valid after manually making additional changes
-    S2 * b = (S2*)malloc(sizeof(S2));                  // valid after manually making additional changes
+    double* a = (double*)malloc(sizeof(double) * 10;     // valid after manually making additional changes
+    S2 * b = (S2*)malloc(sizeof(S2));                    // valid after manually making additional changes
 
 
 
@@ -38,8 +38,8 @@ int main(int argc, char* argv[]) {
     S1 * b = malloc(sizeof(*b));
 
     // You decid to change "a" to an array of 10 doubles, and "b" to an S2 structure...your code is STILL valid                            
-    double* a = malloc(sizeof(*a) * 10);    // valid, no need to manually make additional changes
-    S2 * b = malloc(sizeof(*b));             // valid, no need to manually make additional changes
+    double* a = malloc(sizeof(*a) * 10);                 // valid, no need to manually make additional changes
+    S2 * b = malloc(sizeof(*b));                         // valid, no need to manually make additional changes
 
 
 
