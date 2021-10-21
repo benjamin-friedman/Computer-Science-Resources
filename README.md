@@ -1,9 +1,7 @@
 # Computer-Science-Resources
 Contains resources for the following:
 - Data Structures
-- Opaque Object Design in C
-- Using Linux and the Vim text editor
+- C: Opque Object Design and Proper Use of Malloc
+- Using Linux, Vim, and Makefiles
 - Using Makefiles
-- Inheritance in C++
-- Move Semantics in C++
-- Operator Overloading in C++
+- C++: Inheritance Basics, Copy/Move Semantics Basics, Operator Overloading Basics.
