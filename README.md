@@ -6,3 +6,4 @@ Contains resources for the following:
 - Using Makefiles
 - Inheritance in C++
 - Move Semantics in C++
+- Operator Overloading in C++
