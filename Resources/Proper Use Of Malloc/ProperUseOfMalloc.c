@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 
     // You decid to change "a" to an array of 10 doubles, and "b" to an S2 structure...your code is STILL valid                            
     double* a = malloc(sizeof(*a) * 10);                 // valid, no need to manually make additional changes
-    S2* b = malloc(sizeof(*b));                         // valid, no need to manually make additional changes
+    S2* b = malloc(sizeof(*b));                          // valid, no need to manually make additional changes
 
     return 0;
 }
