@@ -2,7 +2,7 @@
    This program demonstrates the basics of C++ copy and move semantics:
    	- copy assignment/copy constructor
 	- move assignment/move constructor
-	- the "std::move()" function - converts and lvalue to an rvalue, use in move semantics
+	- the "std::move()" function - converts an lvalue to an rvalue, used in move semantics
 	- lvalues vs. rvalues (brief description below)
 	
 	
