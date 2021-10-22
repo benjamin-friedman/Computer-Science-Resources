@@ -100,7 +100,7 @@ MyClass::MyClass() {
 }
 
 /* A complete and independent copy of myClass will be made
-   and stored in the newly constructed object */
+   and stored in the newly constructed object. */
 MyClass::MyClass(const MyClass& myClass) {
 	cout << "copy constructor\n";
 
@@ -113,7 +113,7 @@ MyClass::MyClass(const MyClass& myClass) {
 /* The newly constructed object takes myClass's already
    allocated array and uses it as it's own. myClass's
    array is set to the nullptr because it no longer has
-   ownership of it. No new memory allocation happens */
+   ownership of it. No new memory allocation happens. */
 MyClass::MyClass(MyClass&& myClass) noexcept {
 	cout << "move constructor\n";
 
@@ -123,7 +123,7 @@ MyClass::MyClass(MyClass&& myClass) noexcept {
 }
 
 /* A complete and independent copy of myClass is made and
-   returned to the object it's being assigned to */
+   returned to the object it's being assigned to. */
 MyClass& MyClass::operator=(const MyClass& myClass) {
 	cout << "copy assignment\n";
 
@@ -143,7 +143,7 @@ MyClass& MyClass::operator=(const MyClass& myClass) {
 /* The object getting assigned to takes myClass's already
    allocated array and uses it as it's own. myClass's array
    is set to the nullptr because it no longer has ownership
-   of it. No new memory allocation happens */
+   of it. No new memory allocation happens. */
 MyClass& MyClass::operator=(MyClass&& myClass) noexcept {
 	cout << "move assignment";
 
