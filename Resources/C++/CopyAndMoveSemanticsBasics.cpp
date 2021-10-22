@@ -23,7 +23,7 @@
    
    Can an rvalue go on the left of the "=" operator? Yes.
    	s + s = s;				s + s is an rvalue, s is an lvalue
-   Though this statement has zero utility and does nothing of significance, it is still valid C++ code.
+   Though this statement has zero utility, it is still valid C++ code.
    
    There ARE cases where you can refer to an rvalue by a name. This is when you use && to denote something as an rvalue.
    This is most commonly seen in a formal parameter to a function such as in move semantics as seen below.
