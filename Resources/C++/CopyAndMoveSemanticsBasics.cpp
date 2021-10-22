@@ -6,8 +6,8 @@
 	- lvalues vs. rvalues (brief description below)
 	
 	
-   Though lvalues and rvalues have official definitions, the best way to think of them in general is as follows:
-   An lvalue is something that you can reference by a name, and an rvalue is something that you cannot reference by a name.
+   Though lvalues and rvalues have official definitions, the best way to think of them in general is that an lvalue is
+   something that you can reference by a name, and an rvalue is something that you cannot reference by a name.
    	- lvalues take the form of things like variables and objects
 	- rvalues take the form of things like hardcoded numbers and temporary objects
    Meaning, in "int x = 3;", x is an lvalue since it's a variable with a name, whereas 3 is an rvalue since it's just
@@ -42,14 +42,14 @@ public:
 	MyClass(const MyClass& myClass);
 
 	// Move Constructor: notice how it's not "const" because it will be changed
-	MyClass(MyClass&& myClass) noexcept; 			// "noexcept" just means it may not throw exceptions
+	MyClass(MyClass&& myClass) noexcept; 			// "noexcept" means it will not throw exceptions
 					     			// move constructors should have to have this keyword
 										 
 	// Copy assignment
 	MyClass& operator=(const MyClass& myClass);
 
 	// Move assignment: notice how it's not "const" because it will be changed
-	MyClass& operator=(MyClass&& myClass) noexcept; 	// once again, should not throw exceptions
+	MyClass& operator=(MyClass&& myClass) noexcept; 	// once again, will not throw exceptions
 								// move assignment operators should have this keyword
 
 	~MyClass() { delete[] a; }
@@ -93,8 +93,10 @@ int main() {
 
 
 MyClass::MyClass() {
-	x = 3;
-	a = new int[10];
+	x = 10;
+	a = new int[x];
+	for (int i = 0; i < x; i++)
+		a[i] = i;
 }
 
 /* A complete and independent copy of myClass will be made
@@ -103,8 +105,8 @@ MyClass::MyClass(const MyClass& myClass) {
 	cout << "copy constructor\n";
 
 	x = myClass.x;
-	a = new int[10];
-	for (int i = 0; i < 10; i++)
+	a = new int[x];
+	for (int i = 0; i < x; i++)
 		a[i] = myClass.a[i];
 }
 
@@ -131,8 +133,8 @@ MyClass& MyClass::operator=(const MyClass& myClass) {
 	x = myClass.x;
 	if (a != nullptr)
 		delete[] a;
-	a = new int[10];
-	for (int i = 0; i < 10; i++)
+	a = new int[x];
+	for (int i = 0; i < x; i++)
 		a[i] = myClass.a[i];
 
 	return *this;
