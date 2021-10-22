@@ -23,7 +23,7 @@ public:
 	Money(int _dollars);
 
 	// mutators
-	void input(void);						// reads the dollar sign as well as the amount number
+	void input(void);			// reads the dollar sign as well as the amount number
 	void setDollars(int _dollars);
 	void setCents(int _cents);
 
@@ -37,8 +37,8 @@ public:
 	friend const Money operator +(const Money& amount1, const Money& amount2);
 
 private:
-	int dollars, cents;						// a negative amount is represented as negative dollars AND negative cents
-											// i.e. $-4.50 is -4 dollars and -50 cents
+	int dollars, cents;			// a negative amount is represented as negative dollars AND negative cents
+						// i.e. $-4.50 is -4 dollars and -50 cents
 	int dollarsPart(double amount) const;	// helper functions
 	int centsPart(double amount) const;
 };
@@ -51,8 +51,8 @@ const Money operator -(const Money& amount);	// unary minus operator, not subtra
 ostream& operator <<(ostream& outStream, const Money& m);
 istream& operator >>(istream& inStream, Money &m);
 
-const Money operator++(Money& m);				// prefix increment operator
-const Money operator++(Money& m, int n);		// postfix increment operator
+const Money operator++(Money& m);		// prefix increment operator
+const Money operator++(Money& m, int n);	// postfix increment operator
 
 
 int main(void) {
@@ -177,7 +177,7 @@ int Money::centsPart(double amount) const {
 }
 
 
-// Operators overloading
+// Operator overloading
 // Friend function, can access "cents" and "dollars" directly
 const Money operator+(const Money& amount1, const Money& amount2) {
 	int allCents1 = amount1.cents + amount1.dollars * 100,
@@ -254,13 +254,13 @@ istream& operator >>(istream& inStream, Money &m) {
 	return inStream;
 }
 
-//prefix ++m
+// prefix ++m
 const Money operator++(Money& m) {
 	m.setDollars(m.getDollars() + 1);
 	return m;
 }
 
-//postfix m++
+// postfix m++
 const Money operator++(Money& m, int n) {
 	int dollars = m.getDollars();
 	m.setDollars(dollars + 1);
