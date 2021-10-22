@@ -7,7 +7,7 @@
 	
 	
    Though lvalues and rvalues have official definitions, the best way to think of them in general is as follows:
-   An lvalue is something you can reference by a name, an rvalue is something that you cannot reference by a name.
+   An lvalue is something that you can reference by a name, and an rvalue is something that you cannot reference by a name.
    	- lvalues take the form of things like variables and objects
 	- rvalues take the form of things like hardcoded numbers and temporary objects
    Meaning, in "int x = 3;", x is an lvalue since it's a variable with a name, whereas 3 is an rvalue since it's just
