@@ -1,3 +1,15 @@
+/*
+  This program demonstrates some of the basics of inheritance in C++ with a simple Base and Derived class example.
+  The most important concept it demonstrates is how to properly implement constructors, copy assignment operators,
+  and destructors in inheritance. Additionally, in the main program you can see the order in which the constructors
+  and destructors get called based on the programs output.
+
+  The fundamentals seen here can be extrapolated to any class you create.
+
+  Always make base class destructors virtual, here's why - https://www.geeksforgeeks.org/virtual-destructor/
+*/
+
+
 #include <iostream>
 using namespace std;
 
@@ -13,7 +25,7 @@ public:
 
 	/* 1 Arg Constructor
 	   Same as default except with a custom capacity */
-	Base(int _capacity): capacity(_capacity) {
+	Base(int _capacity) : capacity(_capacity) {
 		size = 0;
 		a = new int[capacity];
 		cout << "Base 1 arg constructor called\n";
@@ -52,7 +64,7 @@ public:
 		return *this;
 	}
 
-	// Always make base class destructors virtual, here's why - https://www.geeksforgeeks.org/virtual-destructor/
+	// destructor - note that it's "virtual".
 	virtual ~Base() {
 		delete[] a;	// free up any dynamically allocated memory
 		cout << "Base destructor called\n";
@@ -89,8 +101,8 @@ public:
 		cout << "Derived copy constructor called\n";
 	}
 
-	/* Derived Copy Assignment Operator: 
-	   Call the Base class copy assignment operator to copy 
+	/* Derived Copy Assignment Operator:
+	   Call the Base class copy assignment operator to copy
 	   over the inherited data in "derived" */
 	Derived& operator=(const Derived& derived) {
 		Base::operator=(derived);
@@ -108,7 +120,31 @@ private:
 };
 
 
-int main() {
+int main(void) {
+
+	// Comment/Uncomment the following options accordingly to see different demonstrations
+
+	/* Option 1: Default derived constructor */
+	Derived d;
+	cout << endl;
+
+	/* Option 2: 2 arg derived constructor */
+	/*Derived d(3, 10);
+	cout << endl;*/
+
+	/* Option 3: copy constructor */
+	/*Derived d(3, 10);
+	cout << endl;
+	Derived dCopy(d);
+	cout << endl;*/
+
+	/* Option 4: copy assignment operator */
+	/*Derived d(3, 10);
+	cout << endl;
+	Derived dCopy;
+	cout << endl;
+	dCopy = d;
+	cout << endl;*/
 
 	return 0;
 }
