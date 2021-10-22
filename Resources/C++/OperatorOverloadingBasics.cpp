@@ -1,5 +1,5 @@
 /*
-   This program shows an example of C++ operator overloading using a Money class example. The fundamentals shown
+   This program demonstartes the basics of C++ operator overloading using a Money class example. The fundamentals shown
    here can be extrapolated to do operator overloading for any class you create, and any operator not used in this
    example. Operator overloading can be done for any operator, and whether or not you overload an operator for a class
    just depends on the utility of the operator for the given class.
