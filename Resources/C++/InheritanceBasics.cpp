@@ -120,9 +120,9 @@ private:
 };
 
 
-int main(void) {
+int main(int argc, char* argv[]) {
 
-	// Comment/Uncomment the following options accordingly to see different demonstrations
+	// Comment/ucomment the following options accordingly to see different demonstrations
 
 	/* Option 1: Default derived constructor */
 	Derived d;
