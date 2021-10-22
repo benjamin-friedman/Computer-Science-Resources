@@ -55,7 +55,7 @@ const Money operator++(Money& m);		// prefix increment operator
 const Money operator++(Money& m, int n);	// postfix increment operator
 
 
-int main(void) {
+int main(int argc, char* argv[]) {
 	Money m1(5);
 	Money m2(7.50);
 
