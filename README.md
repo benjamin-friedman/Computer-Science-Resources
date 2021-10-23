@@ -3,4 +3,4 @@ Contains helpful resources for the following:
 - Data Structures (general with some specificity to C)
 - C - Opaque Object Design and Proper Use of Malloc
 - Using Linux, Vim, and Makefiles
-- C++ - Inheritance Basics, Copy/Move Semantics Basics, Operator Overloading Basics.
+- C++ - Basics of Inheritance, Copy/Move Semantics, and Operator Overloading.
