@@ -1,6 +1,8 @@
 # Class Basics
 An example C++ class demonstrating some of the basics of C++ classes
 
+
+
 **Class Setup** - The basic setup of a class is described below (using ExampleClass as an example). Note the naming conventions.
     Header file:
         - This can be a ".h" or ".hpp" file. The difference is that ".h" files can be used for C or C++,
