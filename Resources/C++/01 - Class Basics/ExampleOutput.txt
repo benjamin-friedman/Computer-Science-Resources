@@ -1,0 +1,51 @@
+CALLING CONSTRUCTORS AND COPY ASSIGNMENT OPERATOR
+Default constructor called for object at address 00BEFE4C
+1-Parameter constructor called for the object at address 00BEFE0C
+3-Parameter constructor called for the object at address 00BEFDCC
+Copy constructor called for the object at address 00BEFD8C
+Copy assignment operator called for object at address 00BEFE4C
+
+PUSHBACK
+pushing back 1 into the array
+pushing back 2 into the array
+pushing back 3 into the array
+pushing back 4 into the array
+The array is being resized
+pushing back 5 into the array
+
+
+GET FUNCTIONS
+The word in ec1 is Ballad 1 in G Minor
+The size of ec1 is 5
+The capacity of ec1 is 6
+The integer at index 0 is 1
+The integer at index 1 is 2
+The integer at index 2 is 3
+The integer at index 3 is 4
+The integer at index 4 is 5
+
+
+SET AND OTHER FUNCTIONS
+After setting x to a new value, x = 1810
+After setting str to a new value, str = Nocturne in B Flat Minor
+The items in the vector are:
+1 2 3 4 5
+After popping the vector once, and modifying the value at index 0
+The items in the vector are:
+52 2 3 4
+Using the friend function to print the string, str = Nocturne in B Flat Minor
+
+
+STATIC MEMBERS
+Calling printPI() without an object
+The value of the mathematical constant pi is 3.14159
+Calling printPI() with an object
+The value of the mathematical constant pi is 3.14159
+Getting the original value of y without an object: 10
+Getting the original value of y with an object: 10
+Calling setY() and getY() without an object, y is now 44
+Calling setY() and getY() without an object, y is now 50
+Destructor called for object at address 00BEFD8C
+Destructor called for object at address 00BEFDCC
+Destructor called for object at address 00BEFE0C
+Destructor called for object at address 00BEFE4C
