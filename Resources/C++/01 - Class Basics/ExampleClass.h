@@ -1,9 +1,19 @@
-#ifndef EXAMPLE_CLASS_H
+/*
+  ExampleClass.h - Header file for ExampleClass
+    - Header guards
+    - Any necessary include directives
+    - Class declaration with declarations for member variables/functions and
+      any inline function definitions
+*/
+
+#ifndef EXAMPLE_CLASS_H     // header guards
 #define EXAMPLE_CLASS_H
 
 #include <iostream>
 #include <string>
 
+/* Using namespace std is not a good convention - it is being used here
+   for the purposes of demonstration to make the code easier to read. */
 using namespace std;
 
 
@@ -12,7 +22,7 @@ public:
     /* Constructors */
     ExampleClass();                                         // default constructor
     explicit ExampleClass(int _capacity);                   // 1 parameter constructor, should use explicit
-    ExampleClass(string _str, double _x, int _capacity);   // 3 parameter constructor
+    ExampleClass(string _str, double _x, int _capacity);    // 3 parameter constructor
     ExampleClass(const ExampleClass& ec);                   // copy constructor
 
     /* Destructor */
@@ -21,7 +31,7 @@ public:
     /* Copy assignment operator */
     ExampleClass& operator=(const ExampleClass& ec);
 
-    /* Get/Getter functions */
+    /* Get functions */
     string getStr() const {                                // inline function example
         return str;
     }
@@ -33,27 +43,23 @@ public:
 
 
     /* Set/Setter/Mutator functions */
-    void setStr(string newStr);                           // sets word to the new word
+    void setStr(string newStr);                             // sets word to the new word
     void setX(double newX);                                 // sets x to the new x-value
     void pushBack(int newItem);                             // pushes back a new integer into the array
     void pop();                                             // pops an item off the array
     void modifyIntegerAtIndex(int index, int newItem);      // sets the integer at "index" to "newItem"
 
     /* Other */
-    void printVec() const;                                  // prints out all the integers in the vector
+    void printArray() const;                                // prints out all the integers in the vector
 
     /* Friend Function */
     friend void printStr(const ExampleClass& ec);           // prints out str
 
     /* Static Functions */
     static void printPI();                                  // prints out PI
-    static int getY() {                                     // inline function returning the value in y
-        return y;
-    }
-
-    static void setY(int newY) {                            // inline function setting y to newY
-        y = newY;
-    }
+    static int getY();                                      // returns y
+    static void setY(int newY);                             // sets y to a new value
+   
 
     /* Static member variables */
     const static int daysInAWeek = 7;
@@ -65,10 +71,13 @@ private:
     string str;
     double x;
 
-    // a vector of integers, use in place of the C++ vector class
-    int* vec;
+    // A vector of integers, used in place of the C++ vector class
+    int* a;
     int size;
     int capacity;
+
+    // helper function to resize vec
+    void resizeArray();
 };
 
 
