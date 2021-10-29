@@ -1,5 +1,14 @@
+/*
+  ExampleClass.cpp - Implementation file for ExampleClass
+	- The include directive for the header file must always be included
+	- Any other necessary include directives - note that any include directives
+	  already in the header file do not need to be written again here. By including
+	  the header file, those include directives are already included here.
+	- Static member variable initializations
+	- Function definitions for any non-inline member functions
+*/
+
 #include "ExampleClass.h"
-#include <iostream>
 
 /***** Static Variables *****/
 int ExampleClass::y = 10;
