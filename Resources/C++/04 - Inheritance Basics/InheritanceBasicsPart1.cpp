@@ -121,7 +121,7 @@ private:
 
 int main(int argc, char* argv[]) {
 
-	// Comment/ucomment the following options accordingly to see different demonstrations
+	// Comment/uncomment the following options accordingly to see different demonstrations
 
 	/* Option 1: Default derived constructor */
 	Derived d;
