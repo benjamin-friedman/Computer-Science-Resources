@@ -6,12 +6,16 @@
 
   The following operator overloads are covered
       addition, subtraction, and unary -		+, -, and -
-	  multiplication and division				* and /
-	  equivalent and not equivalent				== and !=
-	  pre and postincrement						++ and ++
-	  pre and postdecrement						-- and --
-	  output stream/insertion					<<, typically cout
-	  input stream/extraction					>>, typically cin
+	  multiplication and division			* and /
+	  equivalent and not equivalent			== and !=
+	  pre and postincrement				++ and ++
+	  pre and postdecrement				-- and --
+	  output stream/insertion			<<, typically cout
+	  input stream/extraction			>>, typically cin
+
+  Note that the copy assignment operator is also an operator overload for the = operator. However, it
+  is such a special and important operator overload, that it can somewhat be thought of as in a category
+  of its own. However, it should still be known that it's an operator overload.
 
   Every single operator can be overloaded for a class, and some of the most common ones
   are in this program. Some always have utility, such as << and >>. For others, it's situationally
@@ -37,6 +41,16 @@ public:
 	// Constructors
 	Point() : x(0), y(0) {}
 	Point(double _x, double _y) : x(_x), y(_y) {}
+	
+	// Copy Assignment Operator
+	Point& operator=(const Point& p) {
+		if (this == &p)
+			return *this;
+		x = p.x;
+		y = p.y;
+
+		return *this;
+	}
 
 	// Getters/Setters
 	double getX() const { return x; }
@@ -67,15 +81,15 @@ bool operator==(const Point& p1, const Point& p2);
 bool operator!=(const Point& p1, const Point& p2);
 
 // Overloads for the ++ pre/post increment operators
-const Point operator++(Point& p);							// preincrement: ++p
+const Point operator++(Point& p);						// preincrement: ++p
 const Point operator++(Point& p, int n);					// postincrement: p++
 
 // Overloads for the -- pre/post decrement operators
-const Point operator--(Point& p);							// predecrement: --p
+const Point operator--(Point& p);						// predecrement: --p
 const Point operator--(Point& p, int n);					// postdecrement: p--
 
 // Overloads for the insertion/extraction operator
-ostream& operator<<(ostream& out, const Point& p);			// cout << p
+ostream& operator<<(ostream& out, const Point& p);				// cout << p
 istream& operator>>(istream& in, Point& p);					// cin >> p
 
 
