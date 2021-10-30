@@ -25,8 +25,7 @@ public:
 
 	/* 1 Arg Constructor
 	   Same as default except with a custom capacity */
-	Base(int _capacity) : capacity(_capacity) {
-		size = 0;
+	Base(int _capacity) : size(0), capacity(_capacity) {
 		a = new int[capacity];
 		cout << "Base 1 arg constructor called\n";
 	}
