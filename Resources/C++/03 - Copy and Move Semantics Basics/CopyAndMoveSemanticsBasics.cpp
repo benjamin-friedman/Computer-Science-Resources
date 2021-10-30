@@ -45,7 +45,7 @@ public:
 
 	// Move Constructor: notice how it's not "const" because it will be changed
 	MyClass(MyClass&& myClass) noexcept; 			// "noexcept" means it will not throw exceptions
-									// move constructors should have to have this keyword
+								// move constructors should have to have this keyword
 
 	// Copy assignment
 	MyClass& operator=(const MyClass& myClass);
