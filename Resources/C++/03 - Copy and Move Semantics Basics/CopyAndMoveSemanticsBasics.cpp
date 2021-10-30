@@ -37,6 +37,7 @@ class MyClass {
 public:
 	// Default Constructor
 	MyClass();
+	
 	// 1-Parameter Constructor
 	explicit MyClass(int _x);
 
