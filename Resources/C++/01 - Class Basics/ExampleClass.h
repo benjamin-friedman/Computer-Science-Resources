@@ -67,7 +67,6 @@ public:
    
 
     /* Static member variables */
-    const static int daysInAWeek = 7;
     const static double PI;
     static int y;
 
