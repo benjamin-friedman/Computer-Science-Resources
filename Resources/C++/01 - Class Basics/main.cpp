@@ -2,7 +2,7 @@
   ExampleClass.cpp - Main program for demonstrating ExampleClass
 	- Include directives for any built-in C++ libraries
 	- Include directives for any user-defined classes
-	- The main function.
+	- The main function
 */
 
 #include <iostream>
