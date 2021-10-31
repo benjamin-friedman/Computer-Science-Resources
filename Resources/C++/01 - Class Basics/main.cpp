@@ -1,11 +1,8 @@
 /*
   ExampleClass.cpp - Main program for demonstrating ExampleClass
-	- Any include directive
-	- Any other necessary include directives - note that any include directives
-	  already in the header file do not need to be written again here. By including
-	  the header file, those include directives are already included here.
-	- Static member variable initializations
-	- Function definitions for any non-inline member functions
+	- Include directives for any built-in C++ libraries
+	- Include directives for any user-defined classes
+	- The main function.
 */
 
 #include <iostream>
