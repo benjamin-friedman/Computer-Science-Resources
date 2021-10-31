@@ -25,7 +25,7 @@ public:
 
 	/* 1 Arg Constructor
 	   Same as default except with a custom capacity */
-	Base(int _capacity) : size(0), capacity(_capacity) {
+	explicit Base(int _capacity) : size(0), capacity(_capacity) {
 		a = new int[capacity];
 		cout << "Base 1 arg constructor called\n";
 	}
@@ -85,7 +85,7 @@ public:
 		cout << "Derived default constructor called\n";
 	}
 
-	/* Derived 1 Arg Constructor:
+	/* Derived 2 Arg Constructor:
 	   The Base class 1 arg constructor is explicitly called. If it
 	   weren't, the default constructor would be called */
 	Derived(int _y, int _capacity) : y(_y), Base(_capacity) {
