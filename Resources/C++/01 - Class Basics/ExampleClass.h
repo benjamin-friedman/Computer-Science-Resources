@@ -80,7 +80,7 @@ private:
     int size;
     int capacity;
 
-    // helper function to resize vec
+    // helper function to resize a
     void resizeArray();
 };
 
