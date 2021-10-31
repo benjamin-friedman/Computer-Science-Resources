@@ -1,14 +1,13 @@
 /*
   ExampleClass.h - Header file for ExampleClass
     - Header guards
-    - Any necessary include directives for C++ built-in libraries and user-defined
-      libraries.
+    - Include directives for C++ built-in libraries and user-defined libraries.
           - Hypothetically, if ExampleClass used another class, like ExampleClass2,
             then
                 #include "ExampleClass2.h"
             would be present as well.
     - Class declaration with declarations for member variables/functions and
-      any inline function definitions
+      any inline function definitions.
 */
 
 #ifndef EXAMPLE_CLASS_H     // header guards
