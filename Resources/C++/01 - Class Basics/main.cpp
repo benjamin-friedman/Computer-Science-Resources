@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
 	/* Constructors and copy assignment operator */
-	cout << "CALLING CONSTRUCTORS AND COPY ASSIGNMENT OPERATOR\n";
+	cout << "CALLING CONSTRUCTORS\n";
 	ExampleClass ec;							// Default Constructor
 	ExampleClass ec1(3);							// 1-parameter Constructor
 	ExampleClass ec2("Ballad 1 in G Minor", 1849, 3);			// 3-parameter Constructor
