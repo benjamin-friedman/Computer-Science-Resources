@@ -1,7 +1,8 @@
-CALLING CONSTRUCTORS AND COPY ASSIGNMENT OPERATOR
-Default constructor called for object at address 00BEFE4C
-1-Parameter constructor called for the object at address 00BEFE0C
-3-Parameter constructor called for the object at address 00BEFDCC
+CALLING CONSTRUCTORS
+Default constructor called for object at address 0077FA38
+1-Parameter constructor called for the object at address 0077F9F8
+3-Parameter constructor called for the object at address 0077F9B8
+
 
 PUSHBACK
 pushing back 1 into the array
@@ -43,7 +44,6 @@ Getting the original value of y without an object: 10
 Getting the original value of y with an object: 10
 Calling setY() and getY() without an object, y is now 44
 Calling setY() and getY() without an object, y is now 50
-Destructor called for object at address 00BEFD8C
-Destructor called for object at address 00BEFDCC
-Destructor called for object at address 00BEFE0C
-Destructor called for object at address 00BEFE4C
+Destructor called for object at address 0077F9B8
+Destructor called for object at address 0077F9F8
+Destructor called for object at address 0077FA38
