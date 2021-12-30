@@ -27,13 +27,9 @@ public:
     ExampleClass();                                         // default constructor
     explicit ExampleClass(int _capacity);                   // 1 parameter constructor, should use explicit
     ExampleClass(string _str, double _x, int _capacity);    // 3 parameter constructor
-    ExampleClass(const ExampleClass& ec);                   // copy constructor
 
     /* Destructor */
     ~ExampleClass();
-
-    /* Copy assignment operator */
-    ExampleClass& operator=(const ExampleClass& ec);
 
     /* Get functions */
     string getStr() const {                                // inline function example
