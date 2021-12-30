@@ -38,48 +38,12 @@ ExampleClass::ExampleClass(string _str, double _x, int _capacity) : str(_str), x
 }
 
 
-/* Copy Constructor - constructs a new object that is a complete and independent copy of "ec". */
-ExampleClass::ExampleClass(const ExampleClass& ec) : str(ec.str), x(ec.x), size(ec.size), capacity(ec.capacity) {
-	a = new int[capacity];
-	for (int i = 0; i < size; i++)
-		a[i] = ec.a[i];
-	cout << "Copy constructor called for the object at address " << this << endl;
-}
-
-
 
 
 /***** Destructor *****/
 ExampleClass::~ExampleClass() {
 	delete[] a;		// vec was allocated on the heap with "new"
 	cout << "Destructor called for object at address " << this << endl;
-}
-
-
-
-
-/* Copy Assignment Operator */
-ExampleClass& ExampleClass::operator=(const ExampleClass& ec) {
-	if (this == &ec)			// prevent from copying to self
-		return *this;
-
-	/* Copy the values from ec to the calling object */
-	str = ec.str;
-	x = ec.x;
-	size = ec.size;
-	capacity = ec.capacity;
-			
-	/* Make a deep copy of the array in ec, and store it in the calling object. Simply
-	   writing the line
-	        a = ec.a
-	   would mean "a" and "ec.a" share the same array instead of "a" having a copy of the array. */
-	delete[] a;					
-	a = new int[capacity];
-	for (int i = 0; i < size; i++)
-		a[i] = ec.a[i];
-
-	cout << "Copy assignment operator called for object at address " << this;
-	return *this;
 }
 
 
