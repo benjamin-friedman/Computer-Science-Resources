@@ -14,7 +14,7 @@ pushing back 5 into the array
 
 
 GET FUNCTIONS
-The word in ec1 is Ballad 1 in G Minor
+The word in ec1 is Prelude in E Minor
 The size of ec1 is 5
 The capacity of ec1 is 6
 The integer at index 0 is 1
