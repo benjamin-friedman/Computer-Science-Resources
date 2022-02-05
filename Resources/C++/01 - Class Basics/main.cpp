@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 	cout << "CALLING CONSTRUCTORS\n";
 	ExampleClass ec;							// Default Constructor
 	ExampleClass ec1(3);							// 1-parameter Constructor
-	ExampleClass ec2("Ballad 1 in G Minor", 1849, 3);			// 3-parameter Constructor
+	ExampleClass ec2("Prelude in E Minor", 1849, 3);			// 3-parameter Constructor
 	cout << endl << endl;
 
 
