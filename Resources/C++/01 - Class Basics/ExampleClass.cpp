@@ -17,14 +17,14 @@ const double ExampleClass::PI = 3.14159;
 /***** Constructors ******/
 /* Default Constructor - will initialize all of the member variables to default values.
    Can be initialized in the body, or using the member initializer list. */
-ExampleClass::ExampleClass() : str("Ballad 1 in G Minor"), x(1849), size(0), capacity(3) {
+ExampleClass::ExampleClass() : str("Prelude in E Minor"), x(1849), size(0), capacity(3) {
 	a = new int[capacity];
 	cout << "Default constructor called for object at address " << this << endl;
 }
 
 
 /* 1 parameter constructor, should use explicit */
-ExampleClass::ExampleClass(int _capacity) : str("Ballad 1 in G Minor"), x(1849), size(0), capacity(_capacity) {
+ExampleClass::ExampleClass(int _capacity) : str("Prelude in E Minor"), x(1849), size(0), capacity(_capacity) {
 	a = new int[capacity];
 	cout << "1-Parameter constructor called for the object at address " << this << endl;
 }
