@@ -43,18 +43,15 @@ Status date_set_month(DATE hDate, int newMonth) {
 	Date* pDate = hDate;    // cast to the known type
 	
 	// no month can be less than 1 or greater than 12
-	if (newMonth < 1 || newMonth > 12)
-		return FAILURE;
-
-	pDate->month = newMonth;
-
-	// automatically adjust the day in case it's not compatible with the new month
-	if ((pDate->month == 2 && pDate->day > 28) ||
-		((pDate->month == 4 || pDate->month == 5 || pDate->month == 9 || pDate->month == 11) && pDate->day > 30))
+	// certain days only allow for certain months
+	if ((newMonth < 1 || newMonth > 12) ||
+		(newMonth == 2 && pDate->day > 28) ||
+		((newMonth == 4 || newMonth == 5 || newMonth == 9 || newMonth == 11) && pDate->day > 30))
 	{
-		pDate->day = 1;
+		return FAILURE;
 	}
 
+	pDate->month = newMonth;
 	return SUCCESS;
 }
 
