@@ -10,7 +10,7 @@
         defintion.
       - Postconditions are all of the things that happen as a result of the function called.
         They include descriptions about what the function does, how any formal parameters change
-        (if at all), and describe what happens with the functions return value.
+        (if at all), and describe what happens with the function's return value.
 */
   
 
