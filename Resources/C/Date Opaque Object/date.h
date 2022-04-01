@@ -29,7 +29,6 @@ typedef void* DATE;        // opaque object handle
   POSTCONDITION:
     - Creates a new date object and sets the day, month, and year to January 1st, 1970.
     - Returns SUCCESS, else FAILURE for any memory allocation failure.
-
 */
 DATE date_init_default(void);
 
