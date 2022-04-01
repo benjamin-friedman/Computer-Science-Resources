@@ -40,19 +40,27 @@ Status date_set_day(DATE hDate, int newDay) {
 
 
 Status date_set_month(DATE hDate, int newMonth) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 	
 	// no month can be less than 1 or greater than 12
 	if (newMonth < 1 || newMonth > 12)
 		return FAILURE;
 
 	pDate->month = newMonth;
+
+	// automatically adjust the day in case it's not compatible with the new month
+	if ((pDate->month == 2 && pDate->day > 28) ||
+		((pDate->month == 4 || pDate->month == 5 || pDate->month == 9 || pDate->month == 11) && pDate->day > 30))
+	{
+		pDate->day = 1;
+	}
+
 	return SUCCESS;
 }
 
 
 Status date_set_year(DATE hDate, int newYear) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 
 	// no year can be less than 0
 	if (newYear < 0)
@@ -66,19 +74,19 @@ Status date_set_year(DATE hDate, int newYear) {
 
 
 int date_get_day(DATE hDate) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 	return pDate->day;
 }
 
 
 int date_get_month(DATE hDate) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 	return pDate->month;
 }
 
 
 int date_get_year(DATE hDate) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 	return pDate->year;
 }
 
@@ -87,7 +95,7 @@ int date_get_year(DATE hDate) {
 
 
 void date_print(DATE hDate) {
-	Date* pDate = hDate;
+	Date* pDate = hDate;    // cast to the known type
 
 	if (pDate->month < 10)
 		printf("0");
@@ -110,7 +118,7 @@ void date_print(DATE hDate) {
 
 
 void date_destroy(DATE* phDate) {
-	Date* pDate = *phDate;
-	free(pDate);
-	*phDate = NULL;
+	Date* pDate = *phDate;    // cast to the known type
+	free(pDate);              // free up the memory associated with the object
+	*phDate = NULL;           // avoid a dangling pointer
 }
