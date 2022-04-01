@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
 		if (noc != 1)
 			printf("Input error. Enter a number for the month.\n");
 		else
-			printf("Input error. The month must be 1 - 12.\n");
+			printf("Input error. The month must be 1 - 12 and/or be compatible with the day.\n");
 		printf("Enter a new month: ");
 		noc = scanf("%d", &month);
 		while (getchar() != '\n');
