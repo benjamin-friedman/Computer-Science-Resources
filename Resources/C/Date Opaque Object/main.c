@@ -3,7 +3,12 @@
 #include "date.h"
 
 int main(int argc, char* argv[]) {
-	DATE hDate = date_init_default();
+	DATE hDate = NULL;           // date opaque object handle
+	int day, month, year;        // holds the day, month, and year
+	int noc;                     // holds the return value of scanf
+	
+	
+	hDate = date_init_default();
 	if (hDate == NULL) {
 		printf("Error. Failed to create date object due to memory allocation failure.\n");
 		exit(1);
@@ -14,8 +19,6 @@ int main(int argc, char* argv[]) {
 	date_print(hDate);
 	printf("\n\n");
 
-	int day, month, year;
-	int noc;
 
 	// new year
 	printf("Enter a new year: ");
