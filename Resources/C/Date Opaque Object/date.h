@@ -4,11 +4,14 @@
 
   Notes:
       - Preconditions are things that are assumed to be true before a function is called.
-        This means you don't need to check for them not being true. For example, if hDate
-        is a handle to a valid Date object, that means it holds the address of a date object
-        and is not NULL. Therefore, you don't need to check if it's NULL inside of the function
-        defintion.
-      - Postconditions are all of the things that happen as a result of the function called.
+        This means you don't need to check for them not being true, and you as the user of a
+        program using the interface would make a conscious effort to ensure that the precondition
+        never gets violated. For example, if hDate is a handle to a valid Date object, that means
+        it holds the address of a date object and is not NULL. Therefore, there is no check to see
+        if hDate is NULL inside of the function defintion, and you as the user of a program using
+        the interface would make sure to never call the function with a handle currently holding
+        the value of NULL.
+      - Postconditions are all of the things that happen as a result of the function being called.
         They include descriptions about what the function does, how any formal parameters change
         (if at all), and describe what happens with the function's return value.
 */
