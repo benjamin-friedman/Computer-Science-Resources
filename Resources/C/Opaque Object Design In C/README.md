@@ -1,6 +1,6 @@
 # Opaque Object Design In C
 
-This folder contains information regarding the opaque object design in C. C is not an object oriented language and the opaque object design emulates object oriented programming to some extent. Read the PDF for an in depth explanation of the opaque object design and then review the code files which demonstrate the basics of the opaque object design using a simple date object.
+This folder contains information regarding the opaque object design in C. C is not an object oriented language and the opaque object design emulates object oriented programming to some extent. However, it is not possible to have all the features of object oriented programming and for the features it can emulate there is a lot of extra manual work that has to be done. Learning the opaque object design in C teaches you the history of why object oriented programming was developed to begin with and gives you an appreciation for object oriented programming since all of the features that the opaque object design tries to implement are automatically built into object oriented languages with somethin called classes. Read the PDF for an in depth explanation of the opaque object design and then review the code files which demonstrate the basics of the opaque object design using a simple date object.
 
 The basics of the opaque object design:
 - Put the opaque object handle and function declarations in the header file.
