@@ -8,6 +8,6 @@ This program demonstrates the performance differences of malloc, calloc, and rea
 - Zeroing out a new array using malloc vs. calloc
 - Resizing an existing array using malloc vs. realloc
 
-The program demonstrates that on average it is more efficient to zero out a new array with calloc and resize an existing array with realloc. The results of running the program a few times can be seen in results.txt.
+The program demonstrates that on average it is more efficient to zero out a new array with calloc and resize an existing array with realloc. The results of running the program an array size of 100 thousand, 1 million, 10 million, and 100 million can be seen in results.txt.
 
 It is intuitive that it would on average be faster to resize an array with realloc because it always attempts to take the existing array and add on extra memory to it instead of creating a copy like malloc always does. It is not intuitive that it would be faster to zero out a new array with calloc. The reasons for this would get into the underlying implementation of calloc.
