@@ -1,18 +1,18 @@
 ---------- RESULTS ----------
 Trials: 1000
-Array Size: 1000000
+Array Size: 100000
 
 
 ZEROING OUT - malloc vs. calloc
-Number of times calloc performed better:   978    Average performance increase:      0.00124131 seconds
+Number of times calloc performed better:   27     Average performance increase:      0.001 seconds
+Number of times malloc performed better:   16     Average performance increase:      0.001 seconds
+Number of ties                             957
+
+
+RESIZING - malloc vs. realloc
+Number of times realloc performed better:  101    Average performance increase:      0.001 seconds
 Number of times malloc performed better:   1      Average performance increase:      0.001 seconds
-Number of ties                             21
-
-
-RESIZING - malloc vs. realloc
-Number of times realloc performed better:  1000   Average performance increase:      0.003789 seconds
-Number of times malloc performed better:   0
-Number of ties                             0
+Number of ties                             898
 
 
 
@@ -24,13 +24,13 @@ Array Size: 1000000
 
 
 ZEROING OUT - malloc vs. calloc
-Number of times calloc performed better:   978    Average performance increase:      0.00121677 seconds
-Number of times malloc performed better:   2      Average performance increase:      0.002 seconds
-Number of ties                             20
+Number of times calloc performed better:   866    Average performance increase:      0.00119977 seconds
+Number of times malloc performed better:   5      Average performance increase:      0.001 seconds
+Number of ties                             129
 
 
 RESIZING - malloc vs. realloc
-Number of times realloc performed better:  1000   Average performance increase:      0.003849 seconds
+Number of times realloc performed better:  1000   Average performance increase:      0.002601 seconds
 Number of times malloc performed better:   0
 Number of ties                             0
 
@@ -40,17 +40,17 @@ Number of ties                             0
 
 ---------- RESULTS ----------
 Trials: 1000
-Array Size: 1000000
+Array Size: 10000000
 
 
 ZEROING OUT - malloc vs. calloc
-Number of times calloc performed better:   977    Average performance increase:      0.00126407 seconds
+Number of times calloc performed better:   1000   Average performance increase:      0.014193 seconds
 Number of times malloc performed better:   0
-Number of ties                             23
+Number of ties                             0
 
 
 RESIZING - malloc vs. realloc
-Number of times realloc performed better:  1000   Average performance increase:      0.003865 seconds
+Number of times realloc performed better:  1000   Average performance increase:      0.034997 seconds
 Number of times malloc performed better:   0
 Number of ties                             0
 
@@ -60,36 +60,16 @@ Number of ties                             0
 
 ---------- RESULTS ----------
 Trials: 1000
-Array Size: 1000000
+Array Size: 100000000
 
 
 ZEROING OUT - malloc vs. calloc
-Number of times calloc performed better:   981    Average performance increase:      0.00121509 seconds
-Number of times malloc performed better:   0
-Number of ties                             19
-
-
-RESIZING - malloc vs. realloc
-Number of times realloc performed better:  1000   Average performance increase:      0.00382 seconds
+Number of times calloc performed better:   1000   Average performance increase:      0.132569 seconds
 Number of times malloc performed better:   0
 Number of ties                             0
 
 
-
-
-
----------- RESULTS ----------
-Trials: 1000
-Array Size: 1000000
-
-
-ZEROING OUT - malloc vs. calloc
-Number of times calloc performed better:   976    Average performance increase:      0.00121209 seconds
-Number of times malloc performed better:   0
-Number of ties                             24
-
-
 RESIZING - malloc vs. realloc
-Number of times realloc performed better:  1000   Average performance increase:      0.003874 seconds
+Number of times realloc performed better:  1000   Average performance increase:      0.319953 seconds
 Number of times malloc performed better:   0
 Number of ties                             0
