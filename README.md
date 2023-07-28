@@ -6,3 +6,8 @@ Contains helpful resources for the following:
 - **Linux**: Contains a guide to working in the Linux command line, working with the Vim text editor, and a guide to Makefiles. These three things aren't exclusive to Linux meaning the command line can be used in Mac and Windows (some commands are different), Vim can be installed on Mac and Window, and Makefiles can be used on Mac and Windows if make is installed. However, these guides are geared torwards Linux and these things are traditionally used in Linux. Additionally contains a guide to recovering Vim swap files.
 - **C++**: Basics of Classes, Operator Overloading, Copy/Move Semantics, Inheritance, Function Overloading/Parameters/Default Arugments, and others (work in progress).
 - **Evil Hangman**: An overview of the classic evil hangman project in COMP.1020-Computing II.
+
+
+**Note**
+- It may be preferable to download the document PDFs and view the downloaded PDFs directly instead of viewing them on GitHub. When viewing the documents on GitHub it's possible that some of the content will not display very clearly. For example, the equal sign "=" might look like the subtraction operator "-".
+- If viewing the documents directly on GitHub, then a *load more pages* button will have to be clicked as the pages are gone through. Sometimes, after clicking this button the pages won't load. In this case, the screen has to be clicked again around the same area for a second time in order for the pages to load.
